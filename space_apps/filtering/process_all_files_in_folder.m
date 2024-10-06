@@ -1,7 +1,7 @@
 function process_all_files_in_folder(input_folder)
     files = dir(fullfile(input_folder, '*.csv'));
 
-    output_folder = fullfile(input_folder, 'Classified');
+    output_folder = fullfile(input_folder, 'Filtered');
 
     if ~exist(output_folder, 'dir')
         mkdir(output_folder);

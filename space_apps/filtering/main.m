@@ -2,8 +2,8 @@ clear;
 clc;
 close all;
 
-##input_folder = '../data/lunar/data/training/data/S12_GradeA/';
-input_folder = '../data/lunar/data/S12_GradeB/';
+input_folder = '../data/lunar/data/test/data/Filt_S16_GradeA/';
+##input_folder = '../data/lunar/data/S12_GradeB/';
 
 process_all_files_in_folder(input_folder);
 
