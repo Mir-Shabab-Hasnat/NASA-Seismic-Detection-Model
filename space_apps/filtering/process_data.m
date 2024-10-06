@@ -2,27 +2,11 @@ clear
 clc
 close all
 
-##% Load the seismic data from a CSV file
-##filename = '../data/lunar/data/training/data/S12_GradeA/xa.s12.00.mhz.1972-06-16HR00_evid00060.csv';
-##data = csvread(filename, 1, 0);
-##signal = data(:, 3);  % Velocity
-##n = length(signal);
-##t = (0:n-1);
-##disp(n);
-##
-##
-##threshold = 1e-9;
-##signal_clamped = signal;
-##signal_clamped(abs(signal) < threshold) = 0;
 
-% Parameters
-##input_directory = '../data/lunar/data/training/data/S12_GradeA/';  % Input directory
-##output_directory = '../data/lunar/data/training/data/Processed/';  % Output directory
-input_directory = '../data/lunar/data/test/data/S16_GradeA/';  % Input directory
-output_directory = '../data/lunar/data/test/data/Filt_S16_GradeA/';  % Output directory
-threshold_clamp = 1e-9;  % Clamping threshold
+input_directory = '../data/lunar/data/test/data/S16_GradeA/'; 
+output_directory = '../data/lunar/data/test/data/Filt_S16_GradeA/';
+threshold_clamp = 1e-9;
 
-% Create output directory if it doesn't exist
 if ~exist(output_directory, 'dir')
     mkdir(output_directory);
 end

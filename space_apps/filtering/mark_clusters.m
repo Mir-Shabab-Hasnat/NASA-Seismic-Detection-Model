@@ -14,7 +14,6 @@ function cluster_peak_indices = mark_clusters(signal, threshold)
             % Compute the sum of the cluster
             cluster_sum = sum(signal(cluster_start_index:cluster_end_index));
 
-            % If the sum exceeds the threshold, find the peak of the cluster
             if cluster_sum > threshold
                 % Find the index of the maximum value in the cluster
                 [~, peak_index_in_cluster] = max(signal(cluster_start_index:cluster_end_index));
